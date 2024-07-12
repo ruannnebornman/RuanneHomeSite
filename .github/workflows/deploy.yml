@@ -1,0 +1,53 @@
+name: Build And Deploy
+# Controls when the workflow will run
+on:
+    # Triggers the workflow on push or pull request events but only for the "main" branch
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
+
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Deploy Website1.com
+                uses: appleboy/ssh-action@v0.1.4
+                with:
+                    host: ${{ secrets.W1_HOST }}
+                    port: ${{ secrets.W1_PORT }}
+                    username: ${{ secrets.W1_USERNAME }}
+                    password: ${{ secrets.W1_PASSWORD }}
+
+                    script: |
+                        cd ~/public_html/
+                        git pull
+                        cp .env.local .env.backup
+                        cp .env.Website1 .env.local
+                        cp .env.Website1 .env.test
+                        composer install
+                        bin/console doctrine:migrations:migrate --no-interaction
+                        bin/console cache:clear        
+                        echo "Deployment successful!"
+
+            -   name: Deploy Website2.com
+                uses: appleboy/ssh-action@v0.1.4
+                with:
+                    host: ${{ secrets.W2_HOST }}
+                    port: ${{ secrets.W2_PORT }}
+                    username: ${{ secrets.W2_USERNAME }}
+                    password: ${{ secrets.W2_PASSWORD }}
+
+                    script: |
+                        cd ~/public_html/
+                        git pull
+                        cp .env.local .env.backup
+                        cp .env.Website2 .env.local
+                        cp .env.Website2 .env.test
+                        composer install
+                        bin/console doctrine:migrations:migrate --no-interaction
+                        bin/console cache:clear
+                        echo "Deployment successful!"
