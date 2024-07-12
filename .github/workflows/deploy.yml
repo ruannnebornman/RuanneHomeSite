@@ -14,7 +14,7 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            -   name: Deploy Website1.com
+            -   name: Deploy Website
                 uses: appleboy/ssh-action@v0.1.4
                 with:
                     host: ${{ secrets.W1_HOST }}
@@ -23,11 +23,5 @@ jobs:
 
                     script: |
                         cd ~/public_html/
+                        rm -rf ~/public_html/
                         git pull
-                        cp .env.local .env.backup
-                        cp .env.Website1 .env.local
-                        cp .env.Website1 .env.test
-                        composer install
-                        bin/console doctrine:migrations:migrate --no-interaction
-                        bin/console cache:clear        
-                        echo "Deployment successful!"
