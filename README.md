@@ -1,2 +1,2 @@
-# RuanneHomeSite
-Blog stype Home site
+# Ruanne Bornman Home Site
+Blog style Home site
