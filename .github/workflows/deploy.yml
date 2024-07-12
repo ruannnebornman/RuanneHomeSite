@@ -17,8 +17,9 @@ jobs:
             -   name: Deploy Website
                 uses: garygrossgarten/github-action-scp@release
                 with:
-                    local: test
-                    remote: scp/directory
-                    host: ${{ secrets.W1_HOST }}
-                    privateKey: ${{ secrets.W1_KEY }}
+                    local: public
+                    remote: public_html
+                    host: server245.web-hosting.com
+                    port: 21098
+                    privateKey: ${{ secrets.NAMECHEAP_P_KEY }}
                     rmRemote: true
