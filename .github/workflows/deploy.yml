@@ -22,5 +22,4 @@ jobs:
                     host: server245.web-hosting.com
                     port: 21098
                     privateKey: ${{ secrets.NAMECHEAP_P_KEY }}
-                    passphrase: ${{ secrets.NAMECHEAP_P_KEY_PASS }}
                     rmRemote: true
