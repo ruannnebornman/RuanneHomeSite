@@ -74,6 +74,6 @@ url = "/posts"
 name = "Archive"
 weight = 1
 [[menu.main]]
-url = "https://drive.proton.me/urls/7R5TF9XPFM#tfFM44Sxu08f"
-name = "Download CV / Resume"
+url = "/about"
+name = "About"
 weight = 4
