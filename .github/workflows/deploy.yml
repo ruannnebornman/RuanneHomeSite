@@ -19,8 +19,7 @@ jobs:
                 with:
                     host: ${{ secrets.W1_HOST }}
                     port: ${{ secrets.W1_PORT }}
-                    username: ${{ secrets.W1_USERNAME }}
-                    password: ${{ secrets.W1_PASSWORD }}
+                    key: ${{ secrets.W1_Key }}
 
                     script: |
                         cd ~/public_html/
