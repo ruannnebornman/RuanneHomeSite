@@ -20,6 +20,5 @@ jobs:
                     local: public
                     remote: public_html
                     host: server245.web-hosting.com
-                    port: 21098
-                    privateKey: ${{ secrets.NAMECHEAP_P_KEY }}
-                    rmRemote: true
+                    username: ${{ secrets.SSH_USER }}
+                    password: ${{ secrets.SSH_PASSWORD }}
