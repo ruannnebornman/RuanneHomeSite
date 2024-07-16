@@ -17,3 +17,4 @@ jobs:
               source: public
               target: NewWebsite
               port: 21098
+              rm: true
