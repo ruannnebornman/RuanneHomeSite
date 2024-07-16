@@ -11,12 +11,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v4
+          - name: test paths
+            
           - name: Copy file via SSH key
             uses: appleboy/scp-action@v0.1.7
             with:
               host: server245.web-hosting.com
               username: ${{ secrets.SSH_USER }}
               password: ${{ secrets.SSH_PASSWORD }}
-              source: ../public
+              source: public/*
               target: public_html
               port: 21098
