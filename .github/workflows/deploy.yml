@@ -11,8 +11,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v4
-          - name: test paths
-            
           - name: Copy file via SSH key
             uses: appleboy/scp-action@v0.1.7
             with:
