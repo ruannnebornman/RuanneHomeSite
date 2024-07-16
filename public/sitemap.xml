@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:44789/posts/</loc>
     <lastmod>2018-03-18T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:44789/</loc>
     <lastmod>2018-03-18T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:44789/tags/</loc>
     <lastmod>2018-03-18T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/post-5/</loc>
+    <loc>http://localhost:44789/posts/post-5/</loc>
     <lastmod>2018-03-18T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/typography-story/</loc>
+    <loc>http://localhost:44789/tags/typography-story/</loc>
     <lastmod>2018-03-18T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/post-1/</loc>
+    <loc>http://localhost:44789/posts/post-1/</loc>
     <lastmod>2018-03-18T02:01:58+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:44789/categories/</loc>
     <lastmod>2018-03-18T02:01:58+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/primer/</loc>
+    <loc>http://localhost:44789/tags/primer/</loc>
     <lastmod>2018-03-18T02:01:58+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/todo/</loc>
+    <loc>http://localhost:44789/tags/todo/</loc>
     <lastmod>2018-03-18T02:01:58+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/todo/</loc>
+    <loc>http://localhost:44789/categories/todo/</loc>
     <lastmod>2018-03-18T02:01:58+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/chapter-6/</loc>
+    <loc>http://localhost:44789/posts/chapter-6/</loc>
     <lastmod>2017-04-14T11:25:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/story/</loc>
+    <loc>http://localhost:44789/categories/story/</loc>
     <lastmod>2017-04-14T11:25:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/chapter-1/</loc>
+    <loc>http://localhost:44789/posts/chapter-1/</loc>
     <lastmod>2017-04-09T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/scene/</loc>
+    <loc>http://localhost:44789/tags/scene/</loc>
     <lastmod>2017-04-09T10:58:08-04:00</lastmod>
   </url>
 </urlset>
