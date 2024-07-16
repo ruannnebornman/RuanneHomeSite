@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Ruanne Bornman</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>http://localhost:44789/categories/</link>
     <description>Recent content in Categories on Ruanne Bornman</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Mar 2018 02:01:58 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:44789/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Todo</title>
-      <link>http://localhost:1313/categories/todo/</link>
+      <link>http://localhost:44789/categories/todo/</link>
       <pubDate>Sun, 18 Mar 2018 02:01:58 +0530</pubDate>
-      <guid>http://localhost:1313/categories/todo/</guid>
+      <guid>http://localhost:44789/categories/todo/</guid>
       <description></description>
     </item>
     <item>
       <title>Story</title>
-      <link>http://localhost:1313/categories/story/</link>
+      <link>http://localhost:44789/categories/story/</link>
       <pubDate>Fri, 14 Apr 2017 11:25:05 -0400</pubDate>
-      <guid>http://localhost:1313/categories/story/</guid>
+      <guid>http://localhost:44789/categories/story/</guid>
       <description></description>
     </item>
   </channel>
