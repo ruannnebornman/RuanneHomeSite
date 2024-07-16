@@ -14,6 +14,6 @@ jobs:
               host: server245.web-hosting.com
               username: ${{ secrets.SSH_USER }}
               password: ${{ secrets.SSH_PASSWORD }}
-              source: public/*
-              target: public_html
+              source: public
+              target: NewWebsite
               port: 21098
