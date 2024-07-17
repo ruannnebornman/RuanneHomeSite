@@ -51,7 +51,7 @@ jobs:
           host: server245.web-hosting.com
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          source: ./public
+          source: ${{ steps.deployment.outputs.page_url }}
           target: NewWebsite
           port: 21098
           rm: true
