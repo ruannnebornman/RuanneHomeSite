@@ -36,10 +36,10 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
+#      - name: Upload artifact
+#        uses: actions/upload-pages-artifact@v3
+#        with:
+#          path: ./public
 
   deploy:
     needs: build
@@ -52,7 +52,7 @@ jobs:
           host: server245.web-hosting.com
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          source: ${{ steps.deployment.outputs.page_url }}
+          source: ./public
           target: NewWebsite
           port: 21098
           rm: true
