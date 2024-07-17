@@ -36,6 +36,15 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v4
       - name: Copy file via SSH key
         uses: appleboy/scp-action@master
@@ -43,29 +52,9 @@ jobs:
           host: server245.web-hosting.com
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          source: ./public
+          source: ${{ steps.deployment.outputs.page_url }}
+          tar_dereference: true
           target: NewWebsite
           port: 21098
           rm: true
           strip_components: 1
-#      - name: Upload artifact
-#        uses: actions/upload-pages-artifact@v3
-#        with:
-#          path: ./public
-
-#  deploy:
-#    needs: build
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Copy file via SSH key
-#        uses: appleboy/scp-action@master
-#        with:
-#          host: server245.web-hosting.com
-#          username: ${{ secrets.SSH_USER }}
-#          password: ${{ secrets.SSH_PASSWORD }}
-#          source: ./public
-#          target: NewWebsite
-#          port: 21098
-#          rm: true
-#          strip_components: 1
