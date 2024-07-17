@@ -25,7 +25,7 @@ jobs:
           submodules: recursive,remote
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configur  e-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
@@ -36,10 +36,10 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
+#      - name: Upload artifact
+#        uses: actions/upload-pages-artifact@v3
+#        with:
+#          path: ./public
 
   deploy:
     needs: build
@@ -52,8 +52,7 @@ jobs:
           host: server245.web-hosting.com
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          source: ${{ steps.deployment.outputs.page_url }}
-          tar_dereference: true
+          source: ./public
           target: NewWebsite
           port: 21098
           rm: true
